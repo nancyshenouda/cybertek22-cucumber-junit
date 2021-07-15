@@ -5,8 +5,8 @@ Feature: Google search functionality
   Scenario: User search page title verification
     Given User is on google home page
     Then User should see title is Google
-
+@wip
     Scenario: User search title verification
       Given User is on google home page
-      When user searches for apple
-      Then User should see apple in the title
+      When user searches for "wooden spoon"
+      Then User should see "wooden spoon" in the title

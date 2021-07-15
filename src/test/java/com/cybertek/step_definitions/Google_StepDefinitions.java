@@ -34,4 +34,12 @@ public class Google_StepDefinitions {
         String expectedTitle = "apple";
         Assert.assertTrue(actualTitle.contains(expectedTitle));
     }
+
+    @When("user searches for {string}")
+    public void userSearchesFor(String expectedTitle) {
     }
+
+    @Then("User should see {string} in the title")
+    public void userShouldSeeInTheTitle(String expectedTitle) {
+    }
+}
