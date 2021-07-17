@@ -40,6 +40,6 @@ EtsySearchPage object = new EtsySearchPage();
 
         String actualTitle = Driver.getDriver().getTitle();
         String expectedTitle = "Wooden spoon | Etsy";
-        Assert.assertTrue(actualTitle.equals(expectedTitle));
+        Assert.assertEquals("Title is not matching",expectedTitle, actualTitle); // in cucumber expected is first
     }
 }
