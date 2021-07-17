@@ -22,7 +22,7 @@ public class Hooks {
             scenario.attach(screenshot,"image/png", scenario.getName());
         }
 
-        //Driver.closeDriver();
+        Driver.closeDriver();
         // it is executed after each scenario
     }
     @BeforeStep

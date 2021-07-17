@@ -16,8 +16,24 @@ Feature: Wikipedia Search Functionality
     And User clicks wiki search button
     Then User sees "Steve Jobs" is in the main header
 
+      @ScenarioOutline
+  Scenario Template: Wikipedia Search Functionality Header Verification
+    Given User is on Wikipedia home page
+    When User types "<searchValue>" in the wiki search box
+    And User clicks wiki search button
+    Then User sees "<expectedHeader>" is in the main header
+    Then User sees "<expectedTitle>" is in the wiki title
 
-    Scenario: Wikipedia Search Functionality Image Header Verification
+        Examples: Search terms we are going to use in this template is as below
+          | searchValue     | expectedHeader  | expectedTitle   |
+          | Steve  Jobs     | Steve Jobs      | Steve Jobs      |
+          | Albert Einstein | Albert Einstein | Albert Einstein |
+          | Nikola Tesla    | Nikola Tesla    | Nikola Tesla    |
+          | Chuck Norris    | Chuck Norris    | Chuck Norris    |
+          | Marie Curie     | Marie Curie     | Marie Curie     |
+          | Natalie Dormer  | Natalie Dormer  | Natalie Dormer  |
+
+  Scenario: Wikipedia Search Functionality Image Header Verification
       Given User is on Wikipedia home page
       When User types "Steve Jobs" in the wiki search box
       And User clicks wiki search button
